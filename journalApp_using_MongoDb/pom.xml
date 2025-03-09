@@ -45,7 +45,6 @@
 			<artifactId>spring-boot-starter-data-mongodb</artifactId>
 		</dependency>
 	</dependencies>
-
 	<build>
 		<plugins>
 			<plugin>
@@ -54,5 +53,4 @@
 			</plugin>
 		</plugins>
 	</build>
-
 </project>
