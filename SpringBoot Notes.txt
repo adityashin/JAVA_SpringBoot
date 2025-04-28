@@ -1,0 +1,66 @@
+-- to change the port of tomcat use 
+server.port=3000
+
+what is maven
+build automation tool, simplify build, manage dependencies
+
+what is groupid
+company name
+
+what is artifactid
+project name
+
+mvn validate
+create target
+
+mvn test
+run your testcases
+
+mvn clean
+delete target
+
+structure of springboot application
+.mvn used for maven wrapper
+.gitignore contains  file names to ignore while commenting
+src folder 
+	main test
+		java resources
+			|- static template application.properties---> contains extra configs of your project	
+
+what is ioc container
+means not creating the object by self instead giving the responsibility to IOC container
+spring provides IOC container
+IOC container is like a box which has every object of our project
+
+what is applicationcontext
+It is a way to implement IOC container
+
+what is @component
+class is automatically registered as a spring bean 
+In spring language we call object as a bean
+when a class is annotated with @component its bean gets created and automatically goes to IOC container
+
+what is @SpringBootApplication
+It's an entry point of application
+We apply it on main class only, only one time use 
+
+what does @springBootApplication annotation do
+add @configuration
+add @enableAutoConfiguration
+add @ComponentScan --scan class with @component annotation in whole project
+classes which created outside the main package cannot be scanned because of access issues
+
+what is @AutoWired
+it is way to achieve Dependency injection in our program
+means importing one object to another object using @AutoWired annotation
+IOC container creates only one instance/object of the bean and whenever required it just pass a copy of it instead of creating a new object
+this whole @autoWired process comes under @ComponentScan
+
+what is REST API
+HTTP VERB+URL
+
+what is @RequestMapping do
+it creates a sperate enpoint for a specific controller and its apis eg:library/books here library is an endpoint for bookcontroller api's	
+
+
+
