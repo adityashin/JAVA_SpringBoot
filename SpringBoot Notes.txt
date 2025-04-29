@@ -60,7 +60,17 @@ what is REST API
 HTTP VERB+URL
 
 what is @RequestMapping do
-it creates a sperate enpoint for a specific controller and its apis eg:library/books here library is an endpoint for bookcontroller api's	
+it creates a sperate enpoint for a specific controller and its apis eg:library/books here library is an endpoint for bookcontroller api's
+
+
+what is ORM
+ORM means Object relational mapping
+ORM is a technique used to map java objects to database table;
+IT allows developers to work with database using  OOP concept making it easier to interact with relational databases;
+
+what is JPA
+JPA means Java Persistence API
+JPA is a way to achieve ORM, includes interfaces and annotations that you use in your java classes ,requires a persistence provider(ORM tools) for implementation.	 
 
 
 
