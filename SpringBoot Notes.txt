@@ -72,5 +72,6 @@ what is JPA
 JPA means Java Persistence API
 JPA is a way to achieve ORM, includes interfaces and annotations that you use in your java classes ,requires a persistence provider(ORM tools) for implementation.	 
 
-
+What is ResponseEntity?
+ResponseEntity class is a part of the spring framework and is commonly used in spring boot applications to customize HTTP status codes.
 
