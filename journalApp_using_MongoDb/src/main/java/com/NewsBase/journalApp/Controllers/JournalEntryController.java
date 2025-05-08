@@ -12,6 +12,7 @@ import org.springframework.http.HttpStatusCode;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.nio.file.Path;
 import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Optional;
@@ -64,15 +65,19 @@ public class JournalEntryController {
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
 
-//    @PutMapping("id/{myid}")
-//    public ResponseEntity<?> updateJournalbyid(@PathVariable ObjectId myid,@RequestBody JournalEntry myjournal){
-//        JournalEntry old =     journalEntryService.getJournalByID(myid).orElse(null);
-//        if (old!=null){
-//             old.setContent(myjournal.getContent()!=null && !myjournal.getContent().equals("") ? myjournal.getContent() : old.getContent());
-//             old.setTitle(myjournal.getTitle()!=null && !myjournal.getTitle().equals("") ? myjournal.getTitle() : old.getTitle());
-//            journalEntryService.saveEntry(old);
-//            return new ResponseEntity<JournalEntry>(old,HttpStatus.OK);
-//        }
-//        return new ResponseEntity<>(HttpStatus.NOT_FOUND);
-//    }
+    @PutMapping("id/{myid}/{username}")
+    public ResponseEntity<?> updateJournalbyid(
+            @PathVariable ObjectId myid,
+            @RequestBody JournalEntry myjournal,
+            @PathVariable String username
+    ){
+        JournalEntry old = journalEntryService.getJournalByID(myid).orElse(null);
+        if (old!=null){
+             old.setContent(myjournal.getContent()!=null && !myjournal.getContent().equals("") ? myjournal.getContent() : old.getContent());
+             old.setTitle(myjournal.getTitle()!=null && !myjournal.getTitle().equals("") ? myjournal.getTitle() : old.getTitle());
+            journalEntryService.saveEntry(old);
+            return new ResponseEntity<JournalEntry>(old,HttpStatus.OK);
+        }
+        return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+    }
 }
