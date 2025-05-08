@@ -5,7 +5,6 @@ import com.example.journalApp.Repository.UserEntryRepository;
 import org.bson.types.ObjectId;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-
 import java.util.List;
 import java.util.Optional;
 
@@ -15,23 +14,26 @@ public class UserEntryService {
     public UserEntryRepository userEntryRepository;
 
     public List<User> getAllUsers(){
-      return userEntryRepository.findAll();
+
+        return userEntryRepository.findAll();
     }
 
     public void saveUser(User user){
+
         userEntryRepository.save(user);
     }
 
     public Optional<User> findbyId(ObjectId id){
+
         return userEntryRepository.findById(id);
     }
 
     public void deletebyid(ObjectId id){
+
         userEntryRepository.deleteById(id);
     }
 
     public User findByUserName(String User){
         return userEntryRepository.findByusername(User);
-
     }
 }
