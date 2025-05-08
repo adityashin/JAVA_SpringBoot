@@ -1,35 +1,25 @@
-package com.NewsBase.journalApp.entity;
+package com.example.journalApp.Entity;
 
+import lombok.*;
+import org.bson.types.ObjectId;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
 
-//This is POJO(Plain Old Java Object)
-public class JournalEntry {
-    private long id;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.util.Date;
+
+@Document(collection = "Journal_Entries")
+@Data
+@NoArgsConstructor
+public class  JournalEntry {
+
+    @Id
+    private ObjectId id;
+
+    @NonNull
     private String title;
     private String content;
-
-    public long getId(){
-        return this.id;
-    }
-
-    public void setId(long id){
-        this.id = id;
-    }   
-
-    public String getTitle(){
-        return this.title;
-    }
-
-    public void setTitle(String title){
-        this.title = title;
-    }
-
-    public String getContent(){
-        return this.content;
-    }
-
-    public void setContent(String content){
-        this.content = content;
-    }
-
+    private LocalDateTime date;
 
 }
